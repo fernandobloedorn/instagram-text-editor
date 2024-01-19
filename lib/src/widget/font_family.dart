@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:text_editor/src/font_option_model.dart';
 import 'package:text_editor/text_editor_data.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class FontFamily extends StatefulWidget {
   final List<FontFamilyModel> fonts;
@@ -51,10 +52,11 @@ class _FontFamilyPicker extends StatelessWidget {
         child: Center(
           child: Text(
             'Aa',
-            style: TextStyle(
-              color: isSelected ? Colors.orange : Colors.white,
-              fontFamily: font,
-            ),
+            style: GoogleFonts.getFont(font).copyWith(color: isSelected ? Colors.orange : Colors.white,),
+            // style: TextStyle(
+            //   color: isSelected ? Colors.orange : Colors.white,
+            //   fontFamily: font,
+            // ),
           ),
         ),
       ),
