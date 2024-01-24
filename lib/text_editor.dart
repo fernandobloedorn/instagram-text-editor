@@ -111,16 +111,14 @@ class _TextEditorState extends State<TextEditor> {
     // Initialize decorator
     _doneButton = widget.decoration?.doneButton ??
         Container(
-          padding: EdgeInsets.only(left: 5, right: 5),
+          padding: EdgeInsets.only(left: 15, right: 15, top: 5, bottom: 5),
           decoration: BoxDecoration(
-            color: Colors.white,
-            border: Border.all(color: Colors.black, width: 1),
+            color: Colors.black,
+            border: Border.all(color: Colors.white, width: 1),
             borderRadius: BorderRadius.circular(20),
           ),
-          child: Text(
-            'Feito',
-            style: TextStyle(color: Colors.black),
-          ),
+          child: Text('Feito',
+              style: StylesText.headerMedium.copyWith(color: Colors.white)),
         );
 
     super.initState();
