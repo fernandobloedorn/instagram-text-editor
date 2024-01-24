@@ -114,7 +114,7 @@ class _TextEditorState extends State<TextEditor> {
           padding: EdgeInsets.only(left: 15, right: 15, top: 5, bottom: 5),
           decoration: BoxDecoration(
             color: Colors.black,
-            border: Border.all(color: Colors.white, width: 1),
+            border: Border.all(color: Colors.white, width: 2),
             borderRadius: BorderRadius.circular(20),
           ),
           child: Text('Feito',
