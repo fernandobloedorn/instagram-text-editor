@@ -115,13 +115,13 @@ class _TextEditorState extends State<TextEditor> {
           decoration: BoxDecoration(
             color: Colors.black,
             border: Border.all(color: Colors.white, width: 2),
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(10),
           ),
           child: Text('Feito',
               style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w700,
-                  fontSize: 16)),
+                  fontSize: 15)),
         );
 
     super.initState();
