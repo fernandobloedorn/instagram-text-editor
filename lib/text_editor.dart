@@ -120,7 +120,7 @@ class _TextEditorState extends State<TextEditor> {
           child: Text('Feito',
               style: TextStyle(
                   color: Colors.white,
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w500,
                   fontSize: 15)),
         );
 
