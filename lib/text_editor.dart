@@ -110,7 +110,7 @@ class _TextEditorState extends State<TextEditor> {
 
     // Initialize decorator
     _doneButton = widget.decoration?.doneButton ??
-        Container(
+       Container(
           padding: EdgeInsets.only(left: 15, right: 15, top: 5, bottom: 5),
           decoration: BoxDecoration(
             color: Colors.black,
@@ -118,7 +118,10 @@ class _TextEditorState extends State<TextEditor> {
             borderRadius: BorderRadius.circular(20),
           ),
           child: Text('Feito',
-              style: StylesText.headerMedium.copyWith(color: Colors.white)),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 16)),
         );
 
     super.initState();
