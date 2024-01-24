@@ -111,7 +111,7 @@ class _TextEditorState extends State<TextEditor> {
     // Initialize decorator
     _doneButton = widget.decoration?.doneButton ??
        Container(
-          padding: EdgeInsets.only(left: 15, right: 15, top: 5, bottom: 5),
+          padding: EdgeInsets.only(top: 5, bottom: 5),
           decoration: BoxDecoration(
             color: Colors.black,
             border: Border.all(color: Colors.white, width: 2),
