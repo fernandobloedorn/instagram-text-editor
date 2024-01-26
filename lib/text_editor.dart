@@ -111,15 +111,15 @@ class _TextEditorState extends State<TextEditor> {
     // Initialize decorator
     _doneButton = widget.decoration?.doneButton ??
        Container(
-          padding: EdgeInsets.only(left: 5, right: 5, top: 5, bottom: 5),
+          padding: EdgeInsets.only(left: 15, right: 15, top: 5, bottom: 5),
           decoration: BoxDecoration(
-            color: Colors.black,
-            border: Border.all(color: Colors.white, width: 2),
+            color: Colors.white,
+            border: Border.all(color: Colors.black, width: 2),
             borderRadius: BorderRadius.circular(10),
           ),
           child: Text('Feito',
               style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontWeight: FontWeight.w500,
                   fontSize: 15)),
         );
