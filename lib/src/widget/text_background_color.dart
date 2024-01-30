@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:text_editor/src/text_style_model.dart';
 import 'package:text_editor/text_editor_data.dart';
+import 'dart:ui' as ui;
 
 class TextBackgroundColor extends StatelessWidget {
   final Widget? enableWidget;
@@ -30,7 +31,8 @@ class _SwitchButton extends StatelessWidget {
       width: 25,
       height: 25,
       decoration: BoxDecoration(
-        color: !enabled ? null : Colors.white,
+        color: ui.Color.fromARGB(129, 128, 128, 128),
+        // color: !enabled ? null : Colors.white,
         borderRadius: BorderRadius.circular(5),
         border: Border.all(color: Colors.white, width: 1),
       ),
