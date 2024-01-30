@@ -9,6 +9,7 @@ import 'package:text_editor/src/widget/font_size.dart';
 import 'package:text_editor/src/widget/font_option_switch.dart';
 import 'package:text_editor/src/widget/text_alignment.dart';
 import 'package:text_editor/text_editor_data.dart';
+import 'dart:ui' as ui;
 
 import 'src/widget/text_background_color.dart';
 
