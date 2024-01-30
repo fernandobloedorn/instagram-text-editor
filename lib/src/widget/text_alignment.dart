@@ -38,7 +38,12 @@ class TextAlignment extends StatelessWidget {
     final model = TextEditorData.of(context).textStyleModel;
     return GestureDetector(
       onTapUp: (_) => _onChangeAlignment(model),
-      child: _mapTextAlignToWidget(model.textAlign!),
+      child: Container(
+	       decoration: BoxDecoration(
+        color: ui.Color.fromARGB(129, 128, 128, 128),
+         ),
+        child: _mapTextAlignToWidget(model.textAlign!),
+      ),
     );
   }
 }
