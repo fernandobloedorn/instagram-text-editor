@@ -25,6 +25,8 @@ class TextEditor extends StatefulWidget {
   /// After edit process completed, [onEditCompleted] callback will be called.
   final void Function(TextStyle, TextAlign, String) onEditCompleted;
 
+ final void Function() onEditClosed; 
+
   /// [onTextAlignChanged] will be called after [textAlingment] prop has changed
   final ValueChanged<TextAlign>? onTextAlignChanged;
 
@@ -64,6 +66,7 @@ class TextEditor extends StatefulWidget {
   TextEditor({
     required this.fonts,
     required this.onEditCompleted,
+    required this.onEditClosed,
     this.paletteColors,
     this.backgroundColor,
     this.text = '',
@@ -122,7 +125,7 @@ class _TextEditorState extends State<TextEditor> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.check_rounded, color: Colors.white, size: 30),
+                Icon(Icons.check_rounded, color: Colors.white, size: 20),
               ],
             ),
           );
@@ -137,7 +140,7 @@ class _TextEditorState extends State<TextEditor> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.cancel_rounded, color: Colors.white, size: 30),
+                Icon(Icons.close, color: Colors.white, size: 20),
               ],
             ),
           );
@@ -151,6 +154,10 @@ class _TextEditorState extends State<TextEditor> {
       _textStyleModel.textAlign!,
       _textStyleModel.text,
     );
+  }
+
+  void _editCloseHandler() {
+    widget.onEditClosed();
   }
 
   @override
@@ -170,7 +177,7 @@ class _TextEditorState extends State<TextEditor> {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: GestureDetector(
-                      // onTap: _editCompleteHandler,
+                      onTap: _editCloseHandler,
                       child: _cancelButton,
                     ),
                   ),
