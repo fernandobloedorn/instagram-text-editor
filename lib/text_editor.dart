@@ -127,8 +127,7 @@ class _TextEditorState extends State<TextEditor> {
             ),
           );
 
-    _cancelButton = widget.decoration?._cancelButton ??
-       Container(
+    _cancelButton = Container(
             padding: EdgeInsets.only(left: 15, right: 15, top: 5, bottom: 5),
             decoration: BoxDecoration(
               color: ui.Color.fromARGB(129, 128, 128, 128),
