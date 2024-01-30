@@ -40,6 +40,7 @@ class TextAlignment extends StatelessWidget {
     return GestureDetector(
       onTapUp: (_) => _onChangeAlignment(model),
       child: Container(
+	      padding: const EdgeInsets.all(1.0),
 	       decoration: BoxDecoration(
         color: ui.Color.fromARGB(129, 128, 128, 128),
          ),
