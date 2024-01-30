@@ -121,8 +121,7 @@ class _TextEditorState extends State<TextEditor> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.check_rounded, color: Colors.white, size: 30),
-                Text('Concluir', style: TextStyle(color: Colors.white, fontSize: 12))
+                Icon(Icons.check_rounded, color: Colors.white, size: 36),
               ],
             ),
           );
