@@ -85,6 +85,7 @@ class _TextEditorState extends State<TextEditor> {
   late TextStyleModel _textStyleModel;
   late FontOptionModel _fontOptionModel;
   late Widget _doneButton;
+  late Widget _cancelButton;
 
   @override
   void initState() {
@@ -126,6 +127,22 @@ class _TextEditorState extends State<TextEditor> {
             ),
           );
 
+    _cancelButton = widget.decoration?._cancelButton ??
+       Container(
+            padding: EdgeInsets.only(left: 15, right: 15, top: 5, bottom: 5),
+            decoration: BoxDecoration(
+              color: ui.Color.fromARGB(129, 128, 128, 128),
+              border: Border.all(color: Colors.white, width: 2),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.cancel_rounded, color: Colors.white, size: 30),
+              ],
+            ),
+          );
+
     super.initState();
   }
 
@@ -149,7 +166,16 @@ class _TextEditorState extends State<TextEditor> {
           children: [
             Row(
               children: [
-                Expanded(child: Container()),
+                // Expanded(child: Container()),
+                Expanded(
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: GestureDetector(
+                      // onTap: _editCompleteHandler,
+                      child: _cancelButton,
+                    ),
+                  ),
+                ),
                 Expanded(
                   flex: 3,
                   child: Row(
