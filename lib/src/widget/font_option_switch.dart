@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:text_editor/src/font_option_model.dart';
 import 'package:text_editor/text_editor_data.dart';
+import 'dart:ui' as ui;
 
 class FontOptionSwitch extends StatefulWidget {
   final Widget? fontFamilySwitch;
@@ -61,7 +62,7 @@ class _FontOption extends StatelessWidget {
       height: 25,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12.5),
-        border: Border.all(color: Colors.white, width: 1.5),
+        border: Border.all(color: ui.Color.fromARGB(129, 128, 128, 128), width: 1.5),
       ),
       child: Center(
         child: Text(
