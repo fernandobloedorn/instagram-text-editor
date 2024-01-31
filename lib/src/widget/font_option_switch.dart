@@ -61,8 +61,9 @@ class _FontOption extends StatelessWidget {
       width: 25,
       height: 25,
       decoration: BoxDecoration(
+        color: ui.Color.fromARGB(129, 128, 128, 128),
         borderRadius: BorderRadius.circular(12.5),
-        border: Border.all(color: ui.Color.fromARGB(129, 128, 128, 128), width: 1.5),
+        border: Border.all(color: Colors.white, width: 1.5),
       ),
       child: Center(
         child: Text(
